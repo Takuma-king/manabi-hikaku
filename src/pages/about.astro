@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="運営者情報">
+  <h1>運営者情報</h1>
+  <table>
+    <tbody>
+      <tr>
+        <th>サイト名</th>
+        <td>マナビ比較</td>
+      </tr>
+      <tr>
+        <th>運営者</th>
+        <td>（要記入：公開する運営者名・屋号）</td>
+      </tr>
+      <tr>
+        <th>サイトの目的</th>
+        <td>
+          資格取得・オンライン学習サービスの料金や条件を比較し、申し込み前の判断材料を提供すること。
+        </td>
+      </tr>
+      <tr>
+        <th>広告について</th>
+        <td>
+          当サイトはアフィリエイトプログラムに参加しています。記事内のリンクから申し込みがあった場合、
+          運営者が報酬を受け取ることがあります。掲載情報は各公式サイトの公開情報をもとに作成し、
+          確認日を記事内に記載します。
+        </td>
+      </tr>
+      <tr>
+        <th>お問い合わせ</th>
+        <td>（要記入：問い合わせ先メールアドレスまたはフォームURL）</td>
+      </tr>
+    </tbody>
+  </table>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f7f7f7;
+      width: 10rem;
+    }
+  </style>
+</Base>
