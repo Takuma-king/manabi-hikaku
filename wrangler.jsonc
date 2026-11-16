@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers static-assets deployment for マナビ比較.
+  // The site is a fully static Astro build; `wrangler deploy` serves ./dist.
+  "name": "manabi-hikaku",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
