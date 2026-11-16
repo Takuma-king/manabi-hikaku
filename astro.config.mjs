@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
 
-// NOTE: site URL is the planned custom domain. Until the domain is acquired,
-// Cloudflare Pages will serve the site on its *.pages.dev URL instead.
+// NOTE: site URL is the planned custom domain (manabihikaku.com, chosen
+// 2026-11-16 after manabi-hikaku.com turned out to be already registered).
+// Until the domain is acquired and connected, Cloudflare serves the site
+// on its *.workers.dev URL instead.
 export default defineConfig({
-  site: 'https://manabi-hikaku.com',
+  site: 'https://manabihikaku.com',
   trailingSlash: 'always',
 });
