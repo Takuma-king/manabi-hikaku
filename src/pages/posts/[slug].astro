@@ -17,18 +17,28 @@ const { Content } = await render(post);
 
 <Base title={post.data.title} description={post.data.description}>
   <article>
-    <h1>{post.data.title}</h1>
-    <p>
-      <small>
+    <div class="post-head">
+      {
+        post.data.tags.length > 0 && (
+          <ul class="tag-list">
+            {post.data.tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+        )
+      }
+      <h1>{post.data.title}</h1>
+      <p class="post-date">
         公開：{post.data.pubDate.toLocaleDateString('ja-JP')}
         {
           post.data.updatedDate && (
             <>／更新：{post.data.updatedDate.toLocaleDateString('ja-JP')}</>
           )
         }
-      </small>
-    </p>
+      </p>
+    </div>
     <PrNotice />
     <Content />
+    <a class="back-link" href="/">← 記事一覧へ戻る</a>
   </article>
 </Base>

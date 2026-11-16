@@ -8,23 +8,41 @@ const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
 ---
 
 <Base title="資格・オンライン学習の比較">
-  <h1>資格・オンライン学習を、料金と条件で比べる</h1>
-  <p>
-    マナビ比較は、資格のサブスク・通信講座、オンライン英会話、スキルスクールを、
-    料金・縛り期間・解約条件などの「申し込む前に知りたい条件」で比較するサイトです。
-  </p>
+  <section class="hero">
+    <h1>資格・オンライン学習を、料金と条件で比べます</h1>
+    <p>
+      資格のサブスク・通信講座、オンライン英会話、スキルスクールを、
+      料金・縛り期間・解約条件などの「申し込む前に知りたい条件」で比較するサイトです。
+      気になるサービスがありましたら、まず無料の範囲で確かめる方法からご紹介しています。
+    </p>
+    <ul class="hero-points">
+      <li>料金と条件で比較</li>
+      <li>無料で試せるものから</li>
+      <li>注意点も正直に</li>
+    </ul>
+  </section>
 
   <h2>記事一覧</h2>
   {
     posts.length === 0 ? (
       <p>記事は準備中です。</p>
     ) : (
-      <ul>
+      <ul class="post-list">
         {posts.map((post) => (
-          <li>
-            <a href={`/posts/${post.id}/`}>{post.data.title}</a>
-            <br />
-            <small>{post.data.pubDate.toLocaleDateString('ja-JP')}｜{post.data.description}</small>
+          <li class="post-card">
+            {post.data.tags.length > 0 && (
+              <ul class="tag-list">
+                {post.data.tags.slice(0, 3).map((tag) => (
+                  <li>{tag}</li>
+                ))}
+              </ul>
+            )}
+            <a class="post-title" href={`/posts/${post.id}/`}>
+              {post.data.title}
+            </a>
+            <div class="post-meta">
+              {post.data.pubDate.toLocaleDateString('ja-JP')}｜{post.data.description}
+            </div>
           </li>
         ))}
       </ul>
