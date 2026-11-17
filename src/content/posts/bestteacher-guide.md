@@ -2,6 +2,7 @@
 title: 話す前に「書く」英会話｜ベストティーチャーの無料体験レッスン（Writing）を受ける前に
 description: 「文が組み立てられない」「自分の英語が合っているか分からない」という悩みを持つ人向けに、Writingレッスンが特徴のオンライン英会話ベストティーチャーの無料体験について、考え方と注意点を整理します。
 pubDate: 2026-11-16
+updatedDate: 2026-11-17
 draft: false
 tags: ["オンライン英会話", "無料体験", "ライティング"]
 ---
@@ -96,3 +97,11 @@ tags: ["オンライン英会話", "無料体験", "ライティング"]
 ベストティーチャーのように「書く」ことから始めるレッスン形式は、その不足を補うための一つの方法です。
 まずは無料体験レッスンを受けてみてください。
 自分に合う進め方かどうかを、確かめてみましょう。
+
+## 公式サイトで確認する
+
+無料体験レッスンの申し込みと、最新の条件の確認は公式サイトからできます。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4BGNCF+FWR0QA+2ZIK+6G4HD" rel="nofollow">
+<img border="0" width="100" height="60" alt="" src="https://www20.a8.net/svt/bgt?aid=261117231962&wid=001&eno=01&mid=s00000013934001083000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4BGNCF+FWR0QA+2ZIK+6G4HD" alt="">
