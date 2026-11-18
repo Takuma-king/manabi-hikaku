@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // NOTE: site URL is the planned custom domain (manabihikaku.com, chosen
 // 2026-11-16 after manabi-hikaku.com turned out to be already registered).
@@ -7,4 +8,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://manabihikaku.com',
   trailingSlash: 'always',
+  integrations: [sitemap()],
 });
