@@ -2,6 +2,7 @@
 title: "QQEnglishの特徴と料金｜カランメソッドと正社員講師のオンライン英会話"
 description: "QQEnglishの特徴、ポイント制の料金、無料体験の進め方を整理します。全員正社員の講師陣とカランメソッド正式認定校という特徴と、向いている人・向いていない人の判断材料をまとめました。"
 pubDate: 2026-11-24
+updatedDate: 2026-11-25
 draft: false
 tags: ["オンライン英会話", "QQEnglish", "カランメソッド", "英語学習"]
 ---
@@ -51,6 +52,10 @@ QQEnglishは、ロンドンのカラン協会から正式に認められた認�
 無料体験は25分のレッスンを2回受けられます。
 クレジットカードの登録は不要です。
 1回目のレッスンでは英語力の診断があり、体験後には日本人カウンセラーへの無料相談も用意されています。
+日本人サポートやレッスン保証制度については、こちらでも案内されています。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4BGSTN+7R8BHU+4HHM+61C2Q" rel="nofollow">【QQ English】安心の日本人サポートとレッスン保証制度</a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4BGSTN+7R8BHU+4HHM+61C2Q" alt="">
 
 ## 向いている人・注意したい点
 
@@ -75,6 +80,12 @@ QQEnglishは、ロンドンのカラン協会から正式に認められた認�
 - TOEICなどの試験対策
 - 子ども向けのコース（Callan for Kidsなど）
 
+子ども専用のコース（QQキッズ）も用意されています。
+対象年齢や内容は、こちらから確認できます。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4BGSTN+7R8BHU+4HHM+66H9E" rel="nofollow">【QQキッズ】こども専用オンライン英会話</a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4BGSTN+7R8BHU+4HHM+66H9E" alt="">
+
 また、運営会社はフィリピン・セブ島で語学学校も運営しています。
 オンラインで学んだ先に、短期留学を考えたい方にとっても、流れがつかみやすい構成です。
 
@@ -92,3 +103,10 @@ QQEnglishの特徴は、全員正社員の講師陣と、カランメソッド�
 
 無料体験は2回まで、カード登録も不要です。
 まず体験で、講師の進め方とカランメソッドの形式が自分に合うかを確認してみてください。
+
+## 公式サイトで確認する
+
+料金やキャンペーンの最新情報は、公式サイトで確認できます。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4BGSTN+7R8BHU+4HHM+60WN6" rel="nofollow">【QQ English】3,000人の正社員「プロ教師」で安心のレッスン品質</a>
+<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4BGSTN+7R8BHU+4HHM+60WN6" alt="">
