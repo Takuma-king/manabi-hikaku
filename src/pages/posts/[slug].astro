@@ -15,7 +15,13 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Base title={post.data.title} description={post.data.description}>
+<Base
+  title={post.data.title}
+  description={post.data.description}
+  type="article"
+  pubDate={post.data.pubDate}
+  updatedDate={post.data.updatedDate}
+>
   <article>
     <div class="post-head">
       {
