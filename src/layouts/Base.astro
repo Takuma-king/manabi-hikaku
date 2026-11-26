@@ -338,6 +338,54 @@ const jsonLd =
         color: var(--accent-dark);
         white-space: nowrap;
       }
+      tbody tr:nth-child(even) td {
+        background: var(--accent-softer);
+      }
+      td:first-child {
+        font-weight: 700;
+      }
+      /* 目次 */
+      .toc {
+        background: var(--accent-softer);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 1rem 1.3rem 0.6rem;
+        margin: 0 0 1.6rem;
+      }
+      .toc-title {
+        font-weight: 700;
+        color: var(--accent-dark);
+        margin: 0 0 0.5rem;
+      }
+      .toc ol {
+        margin: 0 0 0.6rem;
+        padding-left: 1.3rem;
+      }
+      .toc li {
+        margin-bottom: 0.3rem;
+      }
+      /* 公式サイトへのボタン（アフィリエイトリンク） */
+      article a[href*='px.a8.net']:not(:has(img)) {
+        display: block;
+        text-align: center;
+        background: linear-gradient(90deg, var(--accent), var(--accent-light));
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.02rem;
+        padding: 0.95rem 1.2rem;
+        border-radius: 999px;
+        margin: 1.2rem 0 1.6rem;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(14, 131, 136, 0.28);
+      }
+      article a[href*='px.a8.net']:not(:has(img)):hover {
+        color: #fff;
+        opacity: 0.92;
+      }
+      /* 関連記事 */
+      .related {
+        margin-top: 2.6rem;
+      }
       a {
         color: var(--accent);
       }

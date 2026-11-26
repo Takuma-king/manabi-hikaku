@@ -12,7 +12,22 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+const toc = headings.filter((h) => h.depth === 2);
+const related = (await getCollection('posts', ({ data }) => !data.draft))
+  .filter((p) => p.id !== post.id)
+  .map((p) => ({
+    entry: p,
+    shared: p.data.tags.filter((t) => post.data.tags.includes(t)).length,
+  }))
+  .filter((x) => x.shared > 0)
+  .sort(
+    (a, b) =>
+      b.shared - a.shared ||
+      b.entry.data.pubDate.valueOf() - a.entry.data.pubDate.valueOf(),
+  )
+  .slice(0, 3)
+  .map((x) => x.entry);
 ---
 
 <Base
@@ -44,8 +59,48 @@ const { Content } = await render(post);
       </p>
     </div>
     <PrNotice />
+    {
+      toc.length >= 3 && (
+        <nav class="toc">
+          <p class="toc-title">この記事の目次</p>
+          <ol>
+            {toc.map((h) => (
+              <li>
+                <a href={`#${h.slug}`}>{h.text}</a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )
+    }
     <Content />
     <PrNotice variant="full" />
+    {
+      related.length > 0 && (
+        <section class="related">
+          <h2>関連記事</h2>
+          <ul class="post-list">
+            {related.map((p) => (
+              <li class="post-card">
+                {p.data.tags.length > 0 && (
+                  <ul class="tag-list">
+                    {p.data.tags.slice(0, 3).map((tag) => (
+                      <li>{tag}</li>
+                    ))}
+                  </ul>
+                )}
+                <a class="post-title" href={`/posts/${p.id}/`}>
+                  {p.data.title}
+                </a>
+                <div class="post-meta">
+                  {p.data.pubDate.toLocaleDateString('ja-JP')}｜{p.data.description}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
     <a class="back-link" href="/">← 記事一覧へ戻る</a>
   </article>
 </Base>
