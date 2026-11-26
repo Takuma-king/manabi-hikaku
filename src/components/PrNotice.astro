@@ -1,9 +1,22 @@
 ---
-// Stealth-marketing regulation (景品表示法) disclosure, shown on every article.
+// Stealth-marketing regulation (景品表示法) disclosure.
+// Short one-liner at the top of every article; full text also at the bottom.
+interface Props {
+  variant?: 'short' | 'full';
+}
+const { variant = 'short' } = Astro.props;
 ---
 
 <aside class="pr-notice">
-  <p>この記事にはプロモーション（広告）が含まれます。記事内のリンクから申し込みがあった場合、運営者が報酬を受け取ることがあります。</p>
+  {
+    variant === 'short' ? (
+      <p>この記事にはプロモーション（広告）が含まれます。</p>
+    ) : (
+      <p>
+        この記事にはプロモーション（広告）が含まれます。記事内のリンクから申し込みがあった場合、運営者が報酬を受け取ることがあります。
+      </p>
+    )
+  }
 </aside>
 
 <style>
