@@ -13,6 +13,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
+const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(`https://manabihikaku.com/posts/${post.id}/`)}`;
 const toc = headings.filter((h) => h.depth === 2);
 const related = (await getCollection('posts', ({ data }) => !data.draft))
   .filter((p) => p.id !== post.id)
@@ -36,8 +37,10 @@ const related = (await getCollection('posts', ({ data }) => !data.draft))
   type="article"
   pubDate={post.data.pubDate}
   updatedDate={post.data.updatedDate}
+  breadcrumb={post.data.title}
 >
   <article>
+    <nav class="breadcrumb"><a href="/">ホーム</a> ＞ {post.data.title}</nav>
     <div class="post-head">
       {
         post.data.tags.length > 0 && (
@@ -75,6 +78,15 @@ const related = (await getCollection('posts', ({ data }) => !data.draft))
     }
     <Content />
     <PrNotice variant="full" />
+    <div class="editor-box">
+      <p class="editor-name">この記事について｜マナビ比較 編集部</p>
+      <p>
+        各社の公式サイトなど、公開されている情報を確認して作成しています。料金や条件は変更される場合がありますので、申し込み前に公式サイトでご確認ください。<a href="/about/">運営者情報はこちら</a>
+      </p>
+    </div>
+    <div class="share-row">
+      <a class="share-x" href={shareUrl} target="_blank" rel="noopener">Xでシェアする</a>
+    </div>
     {
       related.length > 0 && (
         <section class="related">

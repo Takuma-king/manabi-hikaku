@@ -5,6 +5,14 @@ import Base from '../layouts/Base.astro';
 const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const pickupIds = [
+  'online-eikaiwa-ryokin-hikaku',
+  'bokki-3kyu-study-time',
+  'online-eikaiwa-tsuzukanai',
+];
+const pickups = pickupIds
+  .map((id) => posts.find((p) => p.id === id))
+  .filter((p) => p !== undefined);
 ---
 
 <Base title="資格・オンライン学習の比較">
@@ -21,6 +29,33 @@ const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
       <li>注意点も正直に</li>
     </ul>
   </section>
+
+  {
+    pickups.length > 0 && (
+      <>
+        <h2>まず読みたい記事</h2>
+        <ul class="post-list">
+          {pickups.map((post) => (
+            <li class="post-card">
+              {post.data.tags.length > 0 && (
+                <ul class="tag-list">
+                  {post.data.tags.slice(0, 3).map((tag) => (
+                    <li>{tag}</li>
+                  ))}
+                </ul>
+              )}
+              <a class="post-title" href={`/posts/${post.id}/`}>
+                {post.data.title}
+              </a>
+              <div class="post-meta">
+                {post.data.pubDate.toLocaleDateString('ja-JP')}｜{post.data.description}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
 
   <h2>記事一覧</h2>
   {
